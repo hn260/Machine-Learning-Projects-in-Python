@@ -1,12 +1,39 @@
-# 🚢 Titanic Survival Prediction Model
+# 📊 Machine Learning Models Portfolio
 
 ---
 
-## 📌 Project Overview
+## 📌 Repository Overview
 
-This project focuses on building a **Titanic Survival Prediction Model** using machine learning techniques to predict passenger survival based on demographic and travel-related features.
+This repository contains a **curated collection of machine learning models** built to solve a variety of **real-world prediction and classification problems**.
 
-The emphasis is on **clean, reproducible ML workflows**, disciplined preprocessing, and structured model evaluation, using a well-known dataset to demonstrate solid end-to-end ML practices.
+The focus across all projects is not just model accuracy, but **clean ML workflows**, **reproducibility**, and **engineering discipline** — from dataset ingestion to evaluation.
+
+All models follow a **consistent structure and methodology**, making this repository easy to navigate, understand, and extend.
+
+---
+
+## 🧠 Problems Covered
+
+The models in this repository span multiple domains:
+
+* **Regression**
+
+  * Car Price Prediction
+  * House Price Prediction
+  * Wine Quality Prediction
+
+* **Classification**
+
+  * Customer Churn Prediction
+  * Titanic Survival Prediction
+
+* **Healthcare & Medical**
+
+  * Heart Disease Prediction
+  * Diabetes Prediction
+  * Autism Prediction
+
+Each notebook focuses on **one well-defined problem**, avoiding unnecessary scope creep.
 
 ---
 
@@ -16,120 +43,110 @@ The emphasis is on **clean, reproducible ML workflows**, disciplined preprocessi
 * Google Colab
 * Kaggle API
 * Jupyter Notebook
-* Machine Learning libraries (NumPy, Pandas, Scikit-learn)
+* NumPy, Pandas, Scikit-learn
 
 ---
 
-## 🚀 Key Capabilities
+## 🔄 Standard Workflow (Used Across All Models)
 
-* Load the Titanic dataset directly from Kaggle into Colab
-* Perform data cleaning and feature preprocessing
-* Train and evaluate classification models for survival prediction
-* Maintain reproducible experiments using API-based data access
-* Keep the repository clean by excluding raw datasets
+Every project in this repository follows the same disciplined pipeline:
 
----
+1. **Dataset Integration**
 
-## 🔄 Process & Workflow
+   * Datasets sourced from Kaggle
+   * Downloaded programmatically using the Kaggle API
+   * No raw datasets committed to the repository
 
-### 1️⃣ Dataset Integration
+2. **Data Preparation**
 
-* Dataset sourced from Kaggle via the Kaggle API
-* Programmatic download and extraction inside Colab
-* No datasets committed to the GitHub repository
+   * Cleaning and preprocessing
+   * Handling missing values and outliers
+   * Feature encoding and scaling
 
-### 2️⃣ Data Preparation
+3. **Model Development**
 
-* Handling missing values and inconsistent records
-* Encoding categorical variables
-* Feature scaling and selection
+   * Algorithm selection based on problem type
+   * Model training and evaluation
+   * Iterative refinement using appropriate metrics
 
-### 3️⃣ Model Development
+4. **Evaluation & Analysis**
 
-* Selection of suitable classification algorithms
-* Training and evaluation using appropriate classification metrics
-* Iterative refinement based on model performance
+   * Task-relevant metrics (not just accuracy)
+   * Clear separation of results and logic
 
-This workflow ensures **clarity, reproducibility, and control** throughout the ML pipeline.
+This consistency ensures **reproducibility and clarity** across all experiments.
 
 ---
 
-## 🧠 What I Learned
+## 📁 Repository Structure
 
-* Framing survival prediction as a classification problem
-* Importance of preprocessing in mixed-type datasets
-* Evaluating models using metrics beyond raw accuracy
-* Structuring ML notebooks for clarity and repeatability
-* Applying an engineering mindset to benchmark datasets
+```
+machine-learning-models/
+│── Car Price Prediction Model.ipynb
+│── House Price Prediction Model.ipynb
+│── Wine Quality Prediction Model.ipynb
+│── Customer Churn Prediction Model.ipynb
+│── Titanic Survival Prediction Model.ipynb
+│── Heart Disease Prediction Model.ipynb
+│── Diabetes Prediction Model.ipynb
+│── Autism Prediction Model.ipynb
+│── README.md
+```
+
+(Each notebook has its own detailed README when viewed individually.)
+
+---
+
+## 🧠 What This Repository Demonstrates
+
+* Strong fundamentals in machine learning workflows
+* Clean, reproducible experimentation practices
+* Ability to handle diverse datasets and problem types
+* Consistency in structure and documentation
+* An engineering-first approach to ML, not ad-hoc notebooks
 
 ---
 
 ## 📈 Overall Growth
 
-This project strengthened:
+Through these projects, I strengthened:
 
-* An engineering-first approach to machine learning
-* Discipline in dataset handling and experiment design
-* Confidence in building classification models from structured data
-* Ability to reason about data-driven prediction tasks
+* End-to-end ML problem solving
+* Dataset handling without repository pollution
+* Model evaluation beyond surface-level metrics
+* Discipline in structuring ML work professionally
 
----
-
-## 🔧 Possible Improvements
-
-* Feature engineering using domain insights
-* Hyperparameter tuning and model comparison
-* Handling class imbalance more effectively
-* Model persistence and deployment readiness
-* Integration with experiment tracking tools
+This repository reflects **progression and consolidation**, not random experimentation.
 
 ---
 
-## ▶️ How to Run the Project
+## 🔧 Future Improvements
 
-### 1️⃣ Open the Notebook
-
-Upload or open the notebook in **Google Colab**:
-
-```
-Titanic_Survival_Prediction_Model.ipynb
-```
+* Hyperparameter tuning and model comparison across projects
+* Feature importance and interpretability analysis
+* Model persistence and deployment pipelines
+* Experiment tracking and benchmarking
+* Migration of selected models to production-ready services
 
 ---
 
-### 2️⃣ Setup Kaggle API
+## ▶️ How to Run Any Model
 
-```python
-!pip install kaggle
-```
+1. Open the desired notebook in **Google Colab**
+2. Set up Kaggle API access:
 
-```python
-from google.colab import files
-files.upload()
-```
+   ```python
+   !pip install kaggle
+   from google.colab import files
+   files.upload()
+   ```
+3. Configure credentials:
 
-Upload `kaggle.json`.
-
-```python
-!mkdir -p ~/.kaggle
-!cp kaggle.json ~/.kaggle/
-!chmod 600 ~/.kaggle/kaggle.json
-```
-
----
-
-### 3️⃣ Download Dataset
-
-```python
-!kaggle competitions download -c titanic
-!unzip titanic.zip
-```
-
----
-
-### 4️⃣ Run All Cells
-
-Execute the notebook top-to-bottom to reproduce the results.
-
----
+   ```python
+   !mkdir -p ~/.kaggle
+   !cp kaggle.json ~/.kaggle/
+   !chmod 600 ~/.kaggle/kaggle.json
+   ```
+4. Run the dataset download cell inside the notebook
+5. Execute all cells top-to-bottom
 
